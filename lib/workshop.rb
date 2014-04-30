@@ -1,5 +1,6 @@
 require "workshop/version"
+require "workshop/project"
+require "workshop/project/configuration"
 
 module Workshop
-  # Your code goes here...
 end
