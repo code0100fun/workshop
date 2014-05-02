@@ -1,0 +1,15 @@
+require 'workshop'
+
+Workshop::Project.configure do |config|
+  # Configured for an Arduino Fio v3
+  config.project_name = 'blink'
+  config.build.mcu = 'atmega32u4'
+  config.build.core = 'arduino'
+  config.build.variant = 'promicro'
+  config.build.vid = '0x1B4F'
+  config.build.pid = '0x9204'
+  config.build.f_cpu = '8000000L'
+  config.build.includes << '~/Documents/Arduino/hardware/SF32u4_boards/variants/promicro'
+  config.upload.protocol = 'avr109'
+  config.upload.speed = 57600
+end
