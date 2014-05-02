@@ -27,6 +27,7 @@ describe Workshop::Builder do
       project.stub(:build_arduino).and_return(build_arduino)
       project.stub(:name).and_return(project_name)
       project.stub(:main_filename).and_return(main_filename)
+      project.stub(:includes).and_return([])
     end
   end
   subject do
