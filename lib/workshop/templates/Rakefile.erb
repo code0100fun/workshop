@@ -1,0 +1,13 @@
+require 'workshop'
+
+Workshop::Project.configure do |config|
+  config.project_name = '<%= project_name %>'
+  config.build.mcu = 'atmega328p'
+  config.build.core = 'arduino'
+  config.build.variant = 'standard'
+  # config.build.vid = '0x0000'
+  # config.build.pid = '0x0000'
+  config.build.f_cpu = '16000000L'
+  config.upload.protocol = 'arduino'
+  config.upload.speed = 57600
+end

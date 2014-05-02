@@ -1,4 +1,7 @@
 require 'thor'
+require 'erb'
+require 'colorize'
+require 'pathname'
 require 'workshop/project/setup'
 
 module Workshop
@@ -11,7 +14,7 @@ module Workshop
     LONGDESC
     def create(name)
       dir = File.expand_path('./' + name)
-      Workshop::Project::Setup.new(dir).run
+      Workshop::Project::Setup.new(dir, name).run
     end
 
   end
